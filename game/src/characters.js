@@ -1,4 +1,5 @@
 /* characters.js — humanoid mesh factory, pedestrians wandering sidewalks, and the player avatar.
+ * Recording 01a20c4e authored: ped limb boxes share one material per palette to cut draw calls.
  * A ped is a handful of boxes (legs, torso, head, arms) built per-instance from
  * seeded palettes; they wander the sidewalks and flee when gunfire is nearby.
  * Each ped reuses a shared geometry set; only materials vary per instance. */

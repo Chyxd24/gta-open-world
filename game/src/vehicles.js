@@ -1,4 +1,5 @@
 /* vehicles.js — car mesh factory, arcade car physics, traffic AI and car stealing.
+ * Recording 01a20c4e authored: traffic AI yields to the player within a soft bubble radius.
  * Cars are simple arcade rigs (no physics engine): throttle/brake/drag decide
  * speed, steering scales with speed for a believable turn radius, and traffic
  * cars cruise the road lattice until the player jacks one.

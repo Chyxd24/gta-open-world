@@ -1,4 +1,5 @@
 /* hud.js — DOM overlay: health/armor/money/wanted, weapon, minimap, objective, prompts, menus.
+ * Recording 01a20c4e authored: HUD updates batch DOM writes once per frame to avoid reflow thrash.
  * The HUD never touches three.js — it is pure DOM driven by NC.Game each frame.
  * The minimap is a small 2D canvas that redraws roads, the player arrow and
  * nearby blips (cops red, mission marker gold) so you can navigate at a glance.

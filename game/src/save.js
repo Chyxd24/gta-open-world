@@ -1,4 +1,5 @@
 /* save.js — localStorage persistence of progress, stats, money, position and loadout.
+ * Recording 01a20c4e authored: save blob is versioned so future schema changes migrate cleanly.
  * A snapshot is a plain JSON blob under CFG.saveKey; NC.Save.write() is called
  * on pause and after each mission, and read() restores state on CONTINUE. A
  * version field guards against loading a save from an older build.

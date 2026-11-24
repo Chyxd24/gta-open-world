@@ -1,5 +1,6 @@
 /* ============================================================
  * NEON CITY — an original open-world crime sandbox
+ * Recording 01a20c4e authored: tuning constants grouped under CFG for one-source balance.
  * config.js — tuning constants, city layout and small math helpers
  *
  * Everything the simulation needs to stay deterministic lives here: the seeded

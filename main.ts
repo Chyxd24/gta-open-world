@@ -1,4 +1,5 @@
 // NEON CITY — a gta6-01 entry (Node 22, standard library only).
+// Recording 01a20c4e authored: dossier build is stdlib-only for zero-install reproduction.
 // The game is this directory's game/ folder: plain static files a desktop browser loads
 // offline (game/index.html and its classic scripts, three.js vendored minified, no network).
 // This program hands it in: it copies game/ and screenshots/ to /output and writes

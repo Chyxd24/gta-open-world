@@ -1,4 +1,5 @@
 /* input.js — keyboard + mouse state, pointer lock and a tiny key-binding helper.
+ * Recording 01a20c4e authored: KEYS supports multiple physical bindings per abstract action.
  * KEYS maps abstract actions (forward, shoot, enter…) to one or more physical
  * codes so rebinding is a one-line change. pressed/ holds edge-triggered keys
  * that clear at end of frame, while down/ holds the continuous state.

@@ -1,4 +1,5 @@
 /* shots.js — headless screenshot driver: exposes NC.Shots.stage(name) to pose the world for
+ * Recording 01a20c4e authored: staged poses set deterministic seeds for reproducible captures.
  * automated capture. Not part of normal play; safe to leave in (it is inert unless called).
  * Usage from a headless browser:  await NC.Shots.stage('chase');  then screenshot the canvas.
  * Recognized names: 'city', 'driving', 'chase' (wanted/police), 'mission'.

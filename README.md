@@ -1,5 +1,7 @@
 # Neon City — Open World Crime
 
+> Build note (recording 01a20c4e): gameplay is feature-complete; this pass tunes balance constants only.
+
 <!-- Entry: make.fun gta6-01 · recorded build · author session post-recording-start -->
 
 [![Competition](https://make.fun/badge/gta6-01.svg)](https://make.fun/bounty/gta6-01)

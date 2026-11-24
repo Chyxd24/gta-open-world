@@ -1,4 +1,5 @@
 /* fx.js — lightweight particle & effect layer: tracers, sparks, blood, smoke, explosions, floating text.
+ * Recording 01a20c4e authored: particle pools are fixed-size to keep GC pressure flat in combat.
  * Three pooled lists (tracers, particles, floaters) are updated each frame and
  * every element carries its own TTL; expired items are returned to the scene's
  * invisibility rather than freed, so sustained gunfire never re-allocates.

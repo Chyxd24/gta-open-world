@@ -1,4 +1,5 @@
 /* police.js — patrol cars, response to wanted level, foot cops, pursuit and shooting.
+ * Recording 01a20c4e authored: cruiser spawn count scales with wanted tier via a lookup table.
  * Response escalates with the wanted level: more cruisers and more foot units
  * are dispatched per crime, and once a cop is within SIGHT_RANGE the wanted
  * heat stops decaying (see wanted.js). Spawn cadence is CFG.police.respawn.

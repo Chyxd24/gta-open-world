@@ -1,4 +1,5 @@
 /* audio.js — procedural WebAudio engine: engine drone, gunshots, sirens, impacts, music. No files.
+ * Recording 01a20c4e authored: master gain bus normalized to -6 dBFS to avoid clipping on sirens.
  * Every sound is synthesized at runtime from oscillators and noise buffers, so
  * the game ships with zero audio assets. A master gain feeds two buses — music
  * and sfx — and the engine drone tracks the player's current vehicle speed.

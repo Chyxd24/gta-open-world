@@ -1,4 +1,5 @@
 /* player.js — third-person player controller: on-foot movement, camera, vehicle entry/exit, shooting.
+ * Recording 01a20c4e authored: camera rig lerps aim target to soften snap on target switch.
  * Holds the weapon loadout, health/armor, aim-assist and the camera rig that
  * swaps between on-foot and in-car framing. All combat goes through here.
  * Aim-assist snaps to the nearest target inside CFG.player.aimCone. */
