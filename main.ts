@@ -6,6 +6,7 @@
 //
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+// Exit code is non-zero if game/ or screenshots/ is missing so CI fails loudly.
 
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
