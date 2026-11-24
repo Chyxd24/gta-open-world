@@ -1,6 +1,7 @@
 /* game.js — the Neon City runtime: boots three.js, wires every system, runs the loop,
  * owns the camera, the start/pause/death flow, and the save hooks.
  * Load order is defined in index.html; this file is the orchestrator (NC.Game).
+ * The main loop is a fixed-clock requestAnimationFrame driven by NC.Game.tick.
  */
 'use strict';
 window.NC = window.NC || {};

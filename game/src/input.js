@@ -1,7 +1,8 @@
 /* input.js — keyboard + mouse state, pointer lock and a tiny key-binding helper.
  * KEYS maps abstract actions (forward, shoot, enter…) to one or more physical
  * codes so rebinding is a one-line change. pressed/ holds edge-triggered keys
- * that clear at end of frame, while down/ holds the continuous state. */
+ * that clear at end of frame, while down/ holds the continuous state.
+ * Pointer lock is requested on canvas click and released on Esc/pause. */
 'use strict';
 window.NC = window.NC || {};
 

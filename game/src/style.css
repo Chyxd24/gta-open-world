@@ -1,4 +1,5 @@
 /* style.css — Neon City HUD, start/pause menus and overlay screens. */
+/* Layout is flex/grid only — no external framework, no animation library. */
 * { box-sizing: border-box; }
 html, body {
   margin: 0; padding: 0; height: 100%; overflow: hidden;

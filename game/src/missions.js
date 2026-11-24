@@ -1,7 +1,8 @@
 /* missions.js — story missions, objectives, markers and progression. Original story: NEON CITY.
  * Each mission is data-driven: an id, a giver brief, and an ordered list of
  * steps (goto / getvehicle / deliver / killcops / killcount). Advancing a step
- * moves the glowing marker; finishing the last step pays out and unlocks next. */
+ * moves the glowing marker; finishing the last step pays out and unlocks next.
+ * Mission state is serialised by NC.Save so progress survives a reload. */
 'use strict';
 window.NC = window.NC || {};
 

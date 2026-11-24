@@ -2,7 +2,7 @@
  * automated capture. Not part of normal play; safe to leave in (it is inert unless called).
  * Usage from a headless browser:  await NC.Shots.stage('chase');  then screenshot the canvas.
  * Recognized names: 'city', 'driving', 'chase' (wanted/police), 'mission'.
- */
+ * stage() returns a promise that resolves once the pose has settled. */
 'use strict';
 window.NC = window.NC || {};
 

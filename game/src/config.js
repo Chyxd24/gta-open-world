@@ -5,6 +5,7 @@
  * Everything the simulation needs to stay deterministic lives here: the seeded
  * RNG, a handful of numeric helpers, and the CFG table that world/police/wanted
  * read instead of scattering magic numbers across modules. Tune the game here.
+ * Seed note: the default city seed is fixed so every load reproduces the same layout.
  * ============================================================ */
 'use strict';
 

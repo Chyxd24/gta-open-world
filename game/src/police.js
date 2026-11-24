@@ -1,7 +1,8 @@
 /* police.js — patrol cars, response to wanted level, foot cops, pursuit and shooting.
  * Response escalates with the wanted level: more cruisers and more foot units
  * are dispatched per crime, and once a cop is within SIGHT_RANGE the wanted
- * heat stops decaying (see wanted.js). Spawn cadence is CFG.police.respawn. */
+ * heat stops decaying (see wanted.js). Spawn cadence is CFG.police.respawn.
+ * Cruisers spawn on road nodes just outside the player's view frustum. */
 'use strict';
 window.NC = window.NC || {};
 

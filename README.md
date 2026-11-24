@@ -1,5 +1,7 @@
 # Neon City — Open World Crime
 
+<!-- Entry: make.fun gta6-01 · recorded build · author session post-recording-start -->
+
 [![Competition](https://make.fun/badge/gta6-01.svg)](https://make.fun/bounty/gta6-01)
 [![Rank](https://make.fun/badge/gta6-01/Chyxd24/gta-open-world/rank.svg)](https://make.fun/bounty/gta6-01/leaderboard)
 [![Reward](https://make.fun/badge/gta6-01/Chyxd24/gta-open-world/reward.svg)](https://make.fun/bounty/gta6-01)

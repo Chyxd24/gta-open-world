@@ -1,7 +1,8 @@
 /* wanted.js — crime tracking, star rating, heat decay and police dispatch triggers.
  * Heat is a continuous 0..5+ value; the integer part is the star the HUD shows.
  * Decay only kicks in after CFG.wanted.decayTime seconds without a crime AND
- * while no officer has line of sight, so hiding genuinely cools you down. */
+ * while no officer has line of sight, so hiding genuinely cools you down.
+ * Stars flash while heat is rising and lock solid once it plateaus. */
 'use strict';
 window.NC = window.NC || {};
 

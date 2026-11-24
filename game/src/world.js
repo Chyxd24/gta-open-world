@@ -1,7 +1,8 @@
 /* world.js — procedural city geometry, road network, collision grid and sky.
  * The whole city is grown from a single seeded RNG (seed 1337) so every player
  * walks the identical Neon City: blocks, sidewalks, buildings per district,
- * streetlights and props are all placed deterministically from CFG.world. */
+ * streetlights and props are all placed deterministically from CFG.world.
+ * Collision is a uniform grid of cell size CFG.world.cellSize. */
 'use strict';
 window.NC = window.NC || {};
 
