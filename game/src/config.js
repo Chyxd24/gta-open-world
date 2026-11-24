@@ -1,6 +1,10 @@
 /* ============================================================
  * NEON CITY — an original open-world crime sandbox
  * config.js — tuning constants, city layout and small math helpers
+ *
+ * Everything the simulation needs to stay deterministic lives here: the seeded
+ * RNG, a handful of numeric helpers, and the CFG table that world/police/wanted
+ * read instead of scattering magic numbers across modules. Tune the game here.
  * ============================================================ */
 'use strict';
 
@@ -73,9 +77,11 @@ const CFG = {
     steering: 2.05,
     grip: 1.9,
   },
+  /** Star decay: heat bleeds off slowly while no cop has line of sight. */
   wanted: {
     max: 5,
     decayTime: 26,
+    decayRate: 0.12, // heat per second lost while hiding
     crime: { bump: 1, jack: 1, carjack: 1, kill: 2, copKill: 3 },
   },
   traffic: { count: 30, speed: 9 },

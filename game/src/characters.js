@@ -1,4 +1,6 @@
-/* characters.js — humanoid mesh factory, pedestrians wandering sidewalks, and the player avatar. */
+/* characters.js — humanoid mesh factory, pedestrians wandering sidewalks, and the player avatar.
+ * A ped is a handful of boxes (legs, torso, head, arms) built per-instance from
+ * seeded palettes; they wander the sidewalks and flee when gunfire is nearby. */
 'use strict';
 window.NC = window.NC || {};
 

@@ -1,4 +1,7 @@
-/* police.js — patrol cars, response to wanted level, foot cops, pursuit and shooting. */
+/* police.js — patrol cars, response to wanted level, foot cops, pursuit and shooting.
+ * Response escalates with the wanted level: more cruisers and more foot units
+ * are dispatched per crime, and once a cop is within SIGHT_RANGE the wanted
+ * heat stops decaying (see wanted.js). Spawn cadence is CFG.police.respawn. */
 'use strict';
 window.NC = window.NC || {};
 
@@ -47,7 +50,8 @@ NC.Police = (function () {
     const u = {
       h, x, z, heading: 0, health: 60, dead: false,
       isCop: true, fireCooldown: 0, speed: 4.6,
-      state: 'pursue', strafe: rng.range(0, Math.PI * 2),
+      // Cops keep a small strafe offset so they don't bunch into a single column.
+      state: 'pursue', strafe: rng.range(0, Math.PI * 2), strafeDir: rng.chance(0.5) ? 1 : -1,
     };
     h.group.userData.isCop = true;
     h.group.position.set(x, 0, z);
@@ -62,10 +66,11 @@ NC.Police = (function () {
   }
 
   /** Is any cop close enough to see the player (used for wanted decay). */
+  const SIGHT_RANGE = 30; // meters; matches the pursuit engagement distance
   function playerVisible() {
     const p = NC.Game.player;
     for (const u of units) {
-      if (!u.dead && dist2(u.x, u.z, p.x, p.z) < 30 * 30) return true;
+      if (!u.dead && dist2(u.x, u.z, p.x, p.z) < SIGHT_RANGE * SIGHT_RANGE) return true;
     }
     for (const c of cars) {
       if (!c.occupied && dist2(c.x, c.z, p.x, p.z) < 45 * 45) return true;

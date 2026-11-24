@@ -1,4 +1,7 @@
-/* vehicles.js — car mesh factory, arcade car physics, traffic AI and car stealing. */
+/* vehicles.js — car mesh factory, arcade car physics, traffic AI and car stealing.
+ * Cars are simple arcade rigs (no physics engine): throttle/brake/drag decide
+ * speed, steering scales with speed for a believable turn radius, and traffic
+ * cars cruise the road lattice until the player jacks one. */
 'use strict';
 window.NC = window.NC || {};
 

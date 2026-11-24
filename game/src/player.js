@@ -1,4 +1,6 @@
-/* player.js — third-person player controller: on-foot movement, camera, vehicle entry/exit, shooting. */
+/* player.js — third-person player controller: on-foot movement, camera, vehicle entry/exit, shooting.
+ * Holds the weapon loadout, health/armor, aim-assist and the camera rig that
+ * swaps between on-foot and in-car framing. All combat goes through here. */
 'use strict';
 window.NC = window.NC || {};
 

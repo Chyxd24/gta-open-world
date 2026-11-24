@@ -1,4 +1,7 @@
-/* audio.js — procedural WebAudio engine: engine drone, gunshots, sirens, impacts, music. No files. */
+/* audio.js — procedural WebAudio engine: engine drone, gunshots, sirens, impacts, music. No files.
+ * Every sound is synthesized at runtime from oscillators and noise buffers, so
+ * the game ships with zero audio assets. A master gain feeds two buses — music
+ * and sfx — and the engine drone tracks the player's current vehicle speed. */
 'use strict';
 window.NC = window.NC || {};
 

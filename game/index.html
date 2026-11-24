@@ -59,7 +59,8 @@
 
 <!-- Three.js (vendored, minified UMD build) -->
 <script src="vendor/three.min.js"></script>
-<!-- Game source: each file has one clear job. -->
+<!-- Game source: each file has one clear job. Order matters — config and input
+     first (everything reads CFG / NC.Input), game.js last as the bootstrapper. -->
 <script src="src/config.js"></script>
 <script src="src/input.js"></script>
 <script src="src/audio.js"></script>

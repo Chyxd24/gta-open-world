@@ -1,4 +1,7 @@
-/* fx.js — lightweight particle & effect layer: tracers, sparks, blood, smoke, explosions, floating text. */
+/* fx.js — lightweight particle & effect layer: tracers, sparks, blood, smoke, explosions, floating text.
+ * Three pooled lists (tracers, particles, floaters) are updated each frame and
+ * every element carries its own TTL; expired items are returned to the scene's
+ * invisibility rather than freed, so sustained gunfire never re-allocates. */
 'use strict';
 window.NC = window.NC || {};
 

@@ -1,4 +1,7 @@
-/* save.js — localStorage persistence of progress, stats, money, position and loadout. */
+/* save.js — localStorage persistence of progress, stats, money, position and loadout.
+ * A snapshot is a plain JSON blob under CFG.saveKey; NC.Save.write() is called
+ * on pause and after each mission, and read() restores state on CONTINUE. A
+ * version field guards against loading a save from an older build. */
 'use strict';
 window.NC = window.NC || {};
 

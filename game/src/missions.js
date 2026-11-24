@@ -1,4 +1,7 @@
-/* missions.js — story missions, objectives, markers and progression. Original story: NEON CITY. */
+/* missions.js — story missions, objectives, markers and progression. Original story: NEON CITY.
+ * Each mission is data-driven: an id, a giver brief, and an ordered list of
+ * steps (goto / getvehicle / deliver / killcops / killcount). Advancing a step
+ * moves the glowing marker; finishing the last step pays out and unlocks next. */
 'use strict';
 window.NC = window.NC || {};
 

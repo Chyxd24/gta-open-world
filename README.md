@@ -75,6 +75,35 @@ directory and writes `dossier.json` with the kit's `buildDossier` library.
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
+## Architecture in one page
+
+`game.js` is the only orchestrator: it boots three.js, owns the camera and the render loop, and
+ticks every system in a fixed order each frame. Everything else is a self-contained module on the
+`NC` namespace with one job.
+
+```
+Input (keys/mouse) ──┐
+                     ▼
+        Game.animate(dt)   ← dt clamped to 50 ms so a throttled tab can't teleport cars
+                     │
+   ┌─────────┬───────┼───────┬──────────┬─────────┐
+   ▼         ▼       ▼       ▼          ▼         ▼
+ Player   Vehicles World  Police     Missions   FX
+ (combat) (traffic)(grid) (pursuit) (markers) (particles)
+   │         │               │
+   ▼         ▼               ▼
+ Wanted ◄── crime events ──► HUD (DOM + minimap canvas)
+   │
+   └─ heat decays only while no cop has line of sight (Police.playerVisible)
+```
+
+- **Determinism.** `config.js` exposes a seeded RNG (`makeRNG(1337)`); world, traffic and peds all
+  draw from it, so the city is byte-identical on every machine.
+- **Crime → heat → response.** `Wanted.addCrime` raises a continuous heat value; the integer part
+  is the star count the HUD shows and drives how many units `Police` dispatches.
+- **No asset pipeline.** Geometry is built from primitives at load; all audio is synthesized with
+  WebAudio. The only vendored binary is the minified Three.js runtime.
+
 ## Project layout
 
 ```

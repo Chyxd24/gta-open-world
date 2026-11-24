@@ -300,9 +300,15 @@ NC.Game = (function () {
   };
 
   // ---- main loop ----------------------------------------------------------
+  // dt is capped so a background tab (which throttles rAF) can't hand the sim a
+  // huge single step and teleport cars through walls on the next frame.
+  const MAX_DT = 0.05;      // seconds; anything larger is treated as a hiccup
+  const IDLE_DT = 0.016;    // nominal step used before the game has started
+
   function animate() {
     requestAnimationFrame(animate);
-    const dt = Math.min(clock && started ? clock.getDelta() : 0.016, 0.05);
+    const rawDt = clock && started ? clock.getDelta() : IDLE_DT;
+    const dt = Math.min(rawDt, MAX_DT);
     const time = clock ? clock.elapsedTime : 0;
 
     if (started && !paused && !player.dead) {
