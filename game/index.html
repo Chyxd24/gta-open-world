@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon City — Open World Crime</title>
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<canvas id="gameCanvas"></canvas>
+
+<div id="hud"></div>
+
+<!-- Start screen -->
+<div id="startScreen" class="screen">
+  <h1 class="title">NEON CITY</h1>
+  <div class="subtitle">AN OPEN WORLD CRIME STORY</div>
+  <div class="menu">
+    <button class="btn" id="btnNew">NEW GAME</button>
+    <button class="btn" id="btnContinue">CONTINUE</button>
+  </div>
+  <div class="hint">
+    WASD move · Shift run · Mouse look · LMB shoot · RMB aim · R reload · Q swap weapon<br>
+    E enter / exit vehicle · Space handbrake · H horn · Esc pause (auto-saves)<br>
+    <em>Steal cars, run missions for Rook, and watch your wanted level.</em>
+  </div>
+</div>
+
+<!-- Pause -->
+<div id="pauseScreen" class="screen hidden">
+  <div class="bigMsg">PAUSED</div>
+  <div class="menu">
+    <button class="btn" id="btnResume">RESUME</button>
+    <button class="btn" id="btnRestart">RESTART</button>
+  </div>
+  <div class="hint">Progress auto-saves when you pause.</div>
+</div>
+
+<!-- Death / wasted -->
+<div id="deathScreen" class="screen hidden">
+  <div class="bigMsg" style="color:#ff5f6d">WASTED</div>
+  <div class="stats" id="deathStats"></div>
+  <div class="menu">
+    <button class="btn" id="btnRespawn">RESPAWN AT HOSPITAL</button>
+  </div>
+  <div class="hint">You keep your missions but drop 10% of your cash.</div>
+</div>
+
+<!-- Mission passed -->
+<div id="missionScreen" class="screen hidden">
+  <div class="bigMsg">MISSION PASSED</div>
+  <div id="missionTitle" style="font-size:22px;color:#9fb0c4;letter-spacing:3px;"></div>
+  <div class="stats"><span id="missionReward" style="color:#7bf59b;font-weight:800;font-size:26px;"></span><br><span id="missionStats"></span></div>
+  <div class="brief" id="missionBrief"></div>
+  <div class="menu">
+    <button class="btn" id="btnNext">CONTINUE</button>
+  </div>
+</div>
+
+<!-- Three.js (vendored, minified UMD build) -->
+<script src="vendor/three.min.js"></script>
+<!-- Game source: each file has one clear job. -->
+<script src="src/config.js"></script>
+<script src="src/input.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/world.js"></script>
+<script src="src/vehicles.js"></script>
+<script src="src/characters.js"></script>
+<script src="src/player.js"></script>
+<script src="src/wanted.js"></script>
+<script src="src/police.js"></script>
+<script src="src/fx.js"></script>
+<script src="src/missions.js"></script>
+<script src="src/hud.js"></script>
+<script src="src/save.js"></script>
+<script src="src/shots.js"></script>
+<script src="src/game.js"></script>
+</body>
+</html>
